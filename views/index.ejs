@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Kuwait Internet Exchange (IXP) for the State of Kuwait - this project aims to implement a local Internet Exchange Point in Kuwait to enable local networks to efficiently exchange information by eliminating the need to exchange local Internet traffic overseas. This network will form the backbone hub for local Internet Service Providers">
+    <meta name="keywords" content="ixp,internet exchange point, internet,ISP,Kuwait IXP,New Kuwait,New Kuwait 2035">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+    <script>
+        document.createElement('video');
+    </script>
+    <![endif]-->
+
+
+    <div class="d-flex flex-column h-100">
+
+
+
+
+        <div class="container-fluid header">
+            <div class="row mb-4 ">
+                <div class="col mt-1">
+                    <img src="images/citra-logo.png" class="mx-auto d-block" alt="CITRA Logo">
+                </div>
+            </div>
+
+
+            <div class="row ">
+                <div class="col text-center ">
+                    <h2>Kuwait Internet Exchange</h2>
+                    <p class="lead slogan">Empowering the Internet for the State of Kuwait</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="d-flex flex-column flex-grow  ">
+            <div class="h-100 flex-grow middle-content" style=" align-items: center">
+
+                <h1 class="typewrite" data-period="2000" data-type='[ "We&apos;re coming soon.", "Come back later!", "We&apos;ll launch soon." ]'>
+                    <span class="wrap"></span>
+                </h1>
+
+            </div>
+
+            <!--<div class="row fixed-bottom ml-4 align-items-end"> -->
+            <div class="row footer ">
+                <div class="col m-2">
+                    <h5>HOW TO FIND US</h5>
+                    <address class="ml-2">
+                          <strong>Communication and Information Technology Regulatory Authority </strong><br>
+                          Al Dhow Tower, Khalid Ibn Al Waleed Street<br>
+                          Al Sharq, Kuwait<br>                    
+                          <abbr title="Phone">Phone No.</abbr> (+965) 125
+                    </address>
+
+                    <address class="ml-2">
+                          <a href="mailto:contact@ix.kw">contact@ix.kw</a>
+                        </address>
+                </div>
+                <div class="col">
+                    <div id="map" class=" h-100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="darken-effect">
+    </div>
+
+
+
+    <div class="video_contain">
+        <video playsinline autoplay muted loop id="bgvid" clas="">
+            <source src="videos/world_global_digital_age.webm" type="video/webm">
+            <source src="videos/world_global_digital_age.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="/reload/reload.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPDNl4AUDB6bjsrn4EE9AjYPmFECCDP0k" type="text/javascript"></script>
+    <script type="text/javascript">
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 15,
+                scrollwheel: false,
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(29.375196, 47.989810), // kuwait
+
+                // How you would like to style the map. 
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{
+                    "featureType": "all",
+                    "elementType": "all",
+                    "stylers": [{
+                        "hue": "#008eff"
+                    }]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "all",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "road",
+                    "elementType": "all",
+                    "stylers": [{
+                        "saturation": "0"
+                    }, {
+                        "lightness": "0"
+                    }]
+                }, {
+                    "featureType": "transit",
+                    "elementType": "all",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [{
+                        "visibility": "simplified"
+                    }, {
+                        "saturation": "-60"
+                    }, {
+                        "lightness": "-20"
+                    }]
+                }]
+            };
+
+            // Get the HTML DOM element that will contain your map 
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            // Let's also add a marker while we're at it
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(29.375196, 47.989810), //29.375196, 47.9876217
+                map: map,
+                title: ' Al Dhow Tower \n Kuwait City \n Tel: 2230 1306 '
+            });
+        }
+
+
+
+
+
+        var TxtType = function(el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function() {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 150 - Math.random() * 100;
+
+            if (this.isDeleting) {
+                delta /= 2;
+            }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function() {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function() {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+
+    </script>
+
+</body>
+
+</html>
